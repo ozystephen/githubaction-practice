@@ -1,0 +1,16 @@
+name: Hello World
+
+on: 
+  push:
+  pull_request:
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello
+        run: echo "Hello, World!"
+
+      - name: Print Event Name
+        run: echo "This event is a ${{ github.event_name }}"
